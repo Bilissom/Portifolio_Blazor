@@ -1,0 +1,104 @@
+@page "/404"
+
+<PageTitle>404 — Área Selada | Alisson Caio</PageTitle>
+
+<div class="notfound-container">
+    <div class="notfound-content">
+        <!-- Broken Seal -->
+        <div class="broken-seal">
+            <div class="seal-ring outer"></div>
+            <div class="seal-ring inner"></div>
+            <div class="seal-center">404</div>
+        </div>
+
+        <h1 class="text-pale">Área Selada</h1>
+        <p class="text-silver notfound-desc">
+            Esta parte de Hallownest foi selada pelo Pale King. <br />
+            O caminho que você buscava não existe — ou foi esquecido pelo tempo.
+        </p>
+
+        <div class="notfound-quote">
+            <p class="text-essence">
+                <em>"Há lugares no reino que guardam segredos jamais revelados..."</em>
+            </p>
+        </div>
+
+        <div class="notfound-actions">
+            <a href="/" class="btn-soul" id="notfound-home">
+                ⚔ Voltar ao Início
+            </a>
+        </div>
+    </div>
+</div>
+
+<style>
+    .notfound-container {
+        min-height: calc(100vh - 70px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: var(--space-xl);
+    }
+
+    .notfound-content {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: var(--space-lg);
+        max-width: 500px;
+        animation: soulRise 0.6s ease;
+    }
+
+    .broken-seal {
+        position: relative;
+        width: 160px;
+        height: 160px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+    }
+
+    .seal-ring {
+        position: absolute;
+        border-radius: 50%;
+        border: 2px solid;
+        animation: breathe 3s ease-in-out infinite;
+    }
+    .seal-ring.outer {
+        inset: 0;
+        border-color: var(--stone-mid);
+        opacity: 0.4;
+    }
+    .seal-ring.inner {
+        inset: 20px;
+        border-color: var(--essence-purple);
+        opacity: 0.6;
+        animation-delay: 0.5s;
+    }
+
+    .seal-center {
+        font-family: var(--font-title);
+        font-size: 3.5rem;
+        font-weight: 900;
+        color: var(--essence-purple);
+        text-shadow: 0 0 30px var(--essence-purple);
+        animation: breathe 2s ease-in-out infinite;
+    }
+
+    .notfound-desc {
+        font-size: 1.05rem;
+        line-height: 1.8;
+    }
+
+    .notfound-quote {
+        padding: var(--space-md) var(--space-lg);
+        border-left: 2px solid var(--essence-purple);
+        text-align: left;
+    }
+
+    .notfound-actions {
+        margin-top: var(--space-md);
+    }
+</style>
